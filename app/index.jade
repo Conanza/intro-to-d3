@@ -1,0 +1,32 @@
+doctype html
+html( lang="en", ng-strict-di )
+  head
+    title Intro to D3
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width")
+    base( href="/" )
+    // build:css /assets/vendor.css
+    link( href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Rock+Salt' rel='stylesheet')
+    // bower:css
+    // endbower
+    // endbuild
+    
+    // build:css /assets/app.css
+    for style in STYLES
+      link( href="/#{style}", rel="stylesheet" )
+    // endbuild
+    
+  body(ng-app="introToD3")
+    ui-view
+    // build:js /assets/vendor.js
+    // bower:js
+    // endbower
+    // endbuild
+    
+    // build:js /assets/app.js
+    script( src="/app.js" )
+    script( src="/router.js" )
+    for script in SCRIPTS
+      script( src="/#{script}" )
+    // endbuild

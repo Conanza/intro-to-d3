@@ -1,0 +1,21 @@
+{
+  "name": "introToD3",
+  "dependencies": {
+    "angular": "1.2.15",
+    "angular-cookies": "1.2.15",
+    "angular-nvd3": "1.0.2",
+    "angular-resource": "1.2.15",
+    "angular-sanitize": "1.2.15",
+    "angular-ui-router": "0.2.15",
+    "d3": "3.5.6",
+    "es5-shim": "~2.1.0",
+    "json3": "~3.2.6",
+    "normalize-css": "3.0.3",
+    "nvd3": "1.8.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.15",
+    "angular-scenario": "1.2.15"
+  },
+  "private": true
+}
