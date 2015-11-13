@@ -4,7 +4,6 @@ angular
 
 function ex3Ctrl (Ex3Service, $timeout) {
   var self = this;
-  self.working = 'is this working';
 
   Ex3Service.initialized.then(function () {
     $timeout(function () {
