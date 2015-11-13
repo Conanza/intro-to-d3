@@ -9,6 +9,6 @@ function ex3Ctrl (Ex3Service, $timeout) {
   Ex3Service.initialized.then(function () {
     $timeout(function () {
       self.parsedData = Ex3Service.getData();
-    }, 1000);
+    }, 5000);
   });
 }
