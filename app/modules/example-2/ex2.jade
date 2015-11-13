@@ -1,1 +1,43 @@
-h4 example 2!!!!! YOOO
+h4 Circles and Lines
+svg(width='1000', height='1000')
+  circle(cx='100', cy='100', stroke='red', stroke-width='30', r='50')
+    
+  line(
+    x1='200', y1='200'
+    x2='400', y2='400'
+    stroke='black', stroke-width='30'
+  )
+  line(
+    x1='400', y1='400'
+    x2='100', y2='600'
+    stroke='red', stroke-width='30'
+  )
+  
+  //- path 1
+  path(
+    d='M200 100 h100 v100 Z'
+    stroke='green'
+    stroke-width='20'
+    fill='none'
+  )
+  
+  //- transform a whole group of thangz
+  g(transform='translate(100, 100)')
+    //- notice same path as path 1, but transformed
+    path(
+      d='M200 100 h100 v100 Z'
+      stroke='blue'
+      stroke-width='20'
+      fill='none'
+    )
+    path(
+      d='M400 100 h100 v100 Z'
+      stroke='yellow'
+      stroke-width='20'
+      fill='none'
+    )
+    circle(
+      cx='100', cy='100'
+      r='50', fill='none' 
+      stroke='purple', stroke-width='30'
+    )
