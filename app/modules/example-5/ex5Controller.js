@@ -8,13 +8,36 @@ function ex5Ctrl () {
   self.anotherArray = [1, 2, 3, 4, 5];
   self.lastArray = [4, 5];
 
+  self.longArray = [];
+  for (var i = 0; i < 200; i++) {
+    self.longArray.push(i);
+  }
+
   var scale = d3.scale.linear()
     .domain([1, 5])
     .range([0, 200]);
 
+  var largerScale = d3.scale.linear()
+    .domain([0, 200])
+    .range([0, 200]);
+
+  var colorScale = d3.scale.linear()
+    .domain([0, 200])
+    .range(["red", "pink"]);
+
   var svg = d3.select('.example-5').append('svg')
     .attr('width', 250)
     .attr('height', 250);
+
+  self.colorRects = function () {
+    var rects = svg.selectAll('rect').data(self.longArray);
+    rects.enter().append('rect')
+      .attr('y', 100)
+      .attr('width', 20)
+      .attr('height', 20)
+      .attr('x', largerScale)
+      .attr('fill', colorScale);
+  };
 
   self.render = function (data, color, renderType) {
     // bind the data
