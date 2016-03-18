@@ -346,6 +346,10 @@ function scriptsAndStylesheets () {
         files: 'bower.json',
         tasks: ['wiredep']
       },
+      concat: {
+        files: ['app/**/*.js', '!app/**/*_spec.js'],
+        tasks: ['concat:server']
+      },
       copy: {
         files: ['app/**', '!app/**/*.styl', '!app/**/*.jade']
       },
